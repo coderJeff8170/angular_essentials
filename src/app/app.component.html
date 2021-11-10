@@ -348,9 +348,13 @@
 
   <!-- Resources -->
   <h2>Jeff is super awesome</h2>
+  <input type="text" >
 
-  <app-user></app-user>
+  <app-user [name]="rootName" (nameChanged)="onNameChanged($event)"></app-user>
 
+  <app-dashboard [myText] = "'this is the altered text'"></app-dashboard>
+
+  <app-cart [items]="rootItems"></app-cart>
 
 
 
