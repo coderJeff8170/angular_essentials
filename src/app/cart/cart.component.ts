@@ -9,6 +9,7 @@ export class CartComponent implements OnInit {
 
   constructor() { }
   @Input() item = "dsdfs";
+  //remember, @Input means this property is settable from outside..
   @Input() items = [];
 
   onAddItem(item){
@@ -21,7 +22,7 @@ export class CartComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log('it is working');
+    console.log('cart component is working');
   }
 
 }
