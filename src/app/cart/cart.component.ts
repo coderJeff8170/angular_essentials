@@ -13,8 +13,12 @@ export class CartComponent implements OnInit {
   @Input() items = [];
 
   onAddItem(item){
-    this.items.push(item);
-    console.log(this.items);
+    if(this.item){
+      this.items.push(item);
+      this.item="";
+      console.log(this.items);
+    }
+
   }
 
   onItemInput(e){

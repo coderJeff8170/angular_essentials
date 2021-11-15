@@ -1,7 +1,24 @@
 <div>
   <h1>Cart Component</h1>
-  <input type="text" (input)="onItemInput($event)" [value]="item">
-  <br>
-  <button (click)="onAddItem(item)">Add Item</button>
-</div>
+  <input type="text" (input)="onItemInput($event)" [value]="item" />
+  <br />
+  <button
+    class="btn"
+    (click)="onAddItem(item)"
+    [ngClass]="{ 'btn-primary': item !== '', 'btn-secondary': item === '' }"
+  >
+    Add Item
+  </button>
 
+  <p *ngIf="item === ''">Please enter a value!</p>
+
+  <ul class="list-group">
+    <li
+      class="list-group-item"
+      *ngFor="let item of items; let i = index"
+      [ngStyle]="{ background: i % 2 === 0 ? '#eee' : '#aaa' }"
+    >
+      {{ item }}
+    </li>
+  </ul>
+</div>

@@ -7,6 +7,7 @@ import { DashboardComponent } from './dashboard.component';
 import { UserComponent } from './user.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import { CartComponent } from './cart/cart.component';
+import { CounterComponent } from './counter/counter.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { CartComponent } from './cart/cart.component';
     UserComponent,
     DashboardComponent,
     UserDetailComponent,
-    CartComponent
+    CartComponent,
+    CounterComponent
   ],
   imports: [
     BrowserModule,
